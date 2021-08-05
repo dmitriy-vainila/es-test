@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   color: white;
+   font-weight: 400;
+   font-size: 18px;
+}
+body{
+   background: url(./img/background-m.png);
+   background-size: cover;
+   width: 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+}
+
+a{
+   text-decoration: none;
+}
+
+.navbar__list{
+   display:flex;
+   list-style-type: none;   
+}
+.navbar__item{
+   margin-right: 2rem;
+}
+.navbar__item--cocktails{
+   margin-right: 0;
+}
+.item__price, .item__name{
+   display: block;
+   text-align: center;   
+}
+
+.wrapper{
+   width: 100%;
+   min-height:100vh;
+   background: rgba(0,0,0,.6);
+}
+.container{
+   
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   
+   padding-top: 2rem;
+   justify-items: center;
+}
+.main{
+
+}
+.item{
+   display: grid;   
+   justify-items: center;
+   
+   margin-top: 2.5rem;
+   position: relative;
+   overflow: hidden;
+   width: 230px;
+   border-radius: 5px;
+}
+
+.item--pop span{
+   display: inline-block;
+   background: rgba(0, 0, 0, 0.6);
+   width: 8.3rem;
+   text-align: center;
+   height: auto;
+   transform: rotate(45deg);
+   position: absolute;
+   top:8%;
+   left: 50%;
+}
+.img-container{
+   overflow: hidden;
+   width: 230px;
+   height: 250px;
+}
+.item__img{
+   width: 230px;
+   height: 250px;
+   border-radius: 5px;
+   margin-bottom: 10px;
+
+}
+
+.item:hover:after{
+   content: "See more";
+   width: 100%;
+   height: 1.8rem;
+   position: absolute;
+   text-align: center;
+   
+   background: rgba(0, 0, 0, 0.6);
+   top:72%;
+   
+   
+}
+.item__img:hover{
+   width: 250px;
+   height: 265px;
+   border-radius: 5px;
+   position: relative;
+   right: 2%;
+   transition: all .1s ;
+}
+.item__price--sale{
+   text-decoration: line-through;
+   margin-right: 0.3rem;
+}
+
+
+
+
+@media screen and (min-width: 500px){
+   body{
+      background: url(./img/background-d.png);      
+      width: 100%;      
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+   }   
+   
+   .main{
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      gap: 3rem;
+   }
+   
+}
+@media screen and (min-width: 700px){
+   body{
+      background: url(./img/background-d.png);      
+      width: 100%;      
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+   }
+   .main{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+   }
+   header{
+      margin-left: 201px;
+      max-width: 798px;       
+      justify-self: start;
+   }
+}
